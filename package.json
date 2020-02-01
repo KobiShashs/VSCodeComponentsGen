@@ -1,0 +1,84 @@
+{
+  "name": "ks-extension-create",
+  "displayName": "File Templates",
+  "description": "This Extension allows to quickly create new files based on defined templates.",
+  "version": "0.0.1",
+  "author": "KobiShasha",
+  "publisher": "KobiShasha",
+  "homepage": "https://github.com/KobiShashs/VSCodeComponentsGen.git",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/KobiShashs/VSCodeComponentsGen.git"
+  },
+  "license": "None",
+  "engines": {
+    "vscode": "^1.3.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:extension.fileFromTemplate",
+    "onCommand:extension.templateFromFile"
+  ],
+  "main": "./out/src/extension",
+  "contributes": {
+    "configuration": {
+      "type": "object",
+      "title": "VSCode File Templates Configuration",
+      "properties": {
+        "fileTemplates.author": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Value to use to replace #{author} variable."
+        },
+        "fileTemplates.company": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "default": null,
+          "description": "Value to use to replace #{company} variable."
+        }
+      }
+    },
+    "commands": [
+      {
+        "command": "extension.fileFromTemplate",
+        "title": "Kobi Shasha: Create new component",
+        "category": "Files"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "extension.fileFromTemplate"
+        }
+      ],
+      "editor/context": [
+        {
+          "command": "extension.templateFromFile"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "vscode:prepublish": "node ./node_modules/vscode/bin/compile",
+    "compile": "node ./node_modules/vscode/bin/compile -watch -p ./",
+    "postinstall": "node ./node_modules/vscode/bin/install"
+  },
+  "devDependencies": {
+    "tslint": "^3.13.0",
+    "typescript": "^1.8.5",
+    "vscode": "^0.11.0"
+  },
+  "dependencies": {
+    "fs-extra": "^8.1.0",
+    "moment": "^2.18.1",
+    "vsce": "^1.72.0"
+  }
+}
