@@ -1,20 +1,37 @@
 {
   "name": "ks-extension-create",
-  "displayName": "File Templates",
+  "displayName": "VSCode Templates for Angular 8 by Kobi Shasha",
   "description": "This Extension allows to quickly create new files based on defined templates.",
-  "version": "0.0.1",
-  "author": "KobiShasha",
+  "version": "0.0.3",
   "publisher": "KobiShasha",
+  "author": {
+    "name": "Kobi Shasha",
+    "email": "kobi.shasha@gmail.com",
+    "url": "https://kobishasha.com"
+  },
   "homepage": "https://github.com/KobiShashs/VSCodeComponentsGen.git",
   "repository": {
     "type": "git",
     "url": "https://github.com/KobiShashs/VSCodeComponentsGen.git"
   },
   "license": "None",
-  "engines": {
-    "vscode": "^1.3.0"
+  "bugs": {
+    "url": "https://github.com/KobiShashs/VSCodeComponentsGen.git/issues"
   },
+  "engines": {
+    "vscode": "^1.40.0"
+  },
+  "keywords": [
+    "kobi",
+    "shasha",
+    "kobis",
+    "vscode",
+    "component",
+    "template"
+  ],
+  "icon": "images/icon.png",
   "categories": [
+    "Extension Packs",
     "Other"
   ],
   "activationEvents": [
